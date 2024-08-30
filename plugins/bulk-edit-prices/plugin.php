@@ -6,14 +6,15 @@ Author: Andrey Sorokovsky <Sorokovskys@ukr.net>
 Version: 0.0.1
 */
 
-register_activation_hook(
-    __FILE__,
-    'on_activate'
-);
-function on_activate() {
-    add_action("init", "hello_world");
+if(!defined("ABSPATH")) {
+    die;
+}
+class AndreBulkEdit 
+{
+    function __construct() {
+    }
 }
 
-function hello_world() {
-    echo '<script>alert("Hello, world");</script>';
+if (class_exists("AndreBulkEdit")) {
+    new AndreBulkEdit();
 }
